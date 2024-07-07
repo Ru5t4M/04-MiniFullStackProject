@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1720268569140,
+        "createdAt": "2024-07-06T12:22:49.140Z",
+        "updatedAt": "2024-07-06T12:22:49.140Z",
+        "name": "Jamil",
+        "surname": "Mammadov",
+        "email": "j_mammadov@mail.ru",
+        "password": "qwerty"
+    },
+    {
+        "id": 1720268569140,
+        "createdAt": "2024-07-06T12:22:49.140Z",
+        "updatedAt": "2024-07-06T12:22:49.140Z",
+        "name": "Karim",
+        "surname": "Aliyev",
+        "email": "k_aliyev@gmail.com",
+        "password": "123456"
+    },
+    {
+        "id": 1720268569140,
+        "createdAt": "2024-07-06T12:22:49.140Z",
+        "updatedAt": "2024-07-06T12:22:49.140Z",
+        "name": "Nadir",
+        "surname": "Safarov",
+        "email": "n_safarov@gmail.com",
+        "password": "p@ssw0rd"
+    }
+]

@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1720269935936,
+        "createdAt": "2024-07-06T12:45:35.936Z",
+        "updatedAt": "2024-07-06T12:45:35.936Z",
+        "name": "Samsung S22",
+        "desc": "New model, high class phone",
+        "stock": "12",
+        "category": "Mobile Phone",
+        "price": "2399",
+        "imageUrl": "https://www.mgstore.az/image/catalog/products/telefon-ve-planshetler/telefonlar-ve-planshetler/dbvc4784.jpg"
+    },
+    {
+        "id": 1720270340613,
+        "createdAt": "2024-07-06T12:52:20.613Z",
+        "updatedAt": "2024-07-06T12:52:20.613Z",
+        "name": "Xiaomi Redmi Note 12 Pro",
+        "desc": "New model, low-middle class phone",
+        "stock": "24",
+        "category": "Mobile Phone",
+        "price": "1099",
+        "imageUrl": "https://kontakt.az/media/catalog/product/cache/b34559cb8eb520f2bea0d3245ba154fd/n/e/new_project_-_2023-08-07t085839.390.png"
+    },
+    {
+        "id": 1720270348527,
+        "createdAt": "2024-07-06T12:52:28.527Z",
+        "updatedAt": "2024-07-06T12:52:28.527Z",
+        "name": "Playstation 4 Slim",
+        "desc": "Last generation gaming platform",
+        "stock": "9",
+        "category": "Console",
+        "price": "499",
+        "imageUrl": "https://strgimgr.umico.az/sized/840/30966-c02aadefd5da352a3d3b30290ffd85cb.jpg"
+    }
+]
