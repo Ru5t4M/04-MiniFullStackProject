@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Products</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/users">Users</a></li>
+            <li><a href="/baskets">Baskets</a></li>
+            <li><a href="/favorites">Favorites</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <center><h1>FAVORITE PRODUCTS</h1></center>
+        <div class="product-list">
+            <% products.forEach(product => { %>
+                <div class="card">
+                    <h3><%= product[0].name %></h3>
+                    <img src="<%= product[0].imageUrl %>" alt="<%= product[0].name %> Image">
+                    <div class="line"></div>
+                    <p>Description: <%= product[0].desc %></p>
+                    <p>Stock: <%= product[0].stock %></p>
+                    <p>Category: <%= product[0].category %></p>
+                    <p>Price: <%= product[0].price %></p>
+                    <button class="edit-button" onclick="editProduct('<%= product[0].id %>')">Edit</button>
+                    <button class="delete-button" onclick="deleteProduct('<%= product[0].id %>')">Delete</button>
+                </div>
+            <% }) %>
+        </div>
+
+        <script>
+            const forum = document.querySelector("#productForm")
+            forum.addEventListener("submit", (e) => {
+                e.preventDefault()
+                const formData = new FormData(e.target)
+                const newProduct = {
+                    name: formData.get("name"),
+                    desc: formData.get("desc"),
+                    stock: formData.get("stock"),
+                    category: formData.get("category"),
+                    price: formData.get("price"),
+                    imageUrl: formData.get("imageUrl")
+                }
+                fetch("/products", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(newProduct)
+                })
+               .then(res => res.json())
+               .then(product => {
+                    window.location.reload()
+                })
+            })
+
+            const deleteProduct = (id) => {
+                fetch(`/products/${id}`, {
+                    method: "DELETE"
+                })
+               .then(res => res.json())
+               .then(product => {
+                    window.location.reload()
+                })
+            }
+        </script>
+</body>
+</html>
